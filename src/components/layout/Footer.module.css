@@ -1,0 +1,14 @@
+.footer {
+  padding: 2rem 2.5rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+.accent {
+  color: var(--cyan);
+}

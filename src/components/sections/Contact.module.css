@@ -1,0 +1,148 @@
+.contact {
+  padding: 7rem 2.5rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  margin-bottom: 0.75rem;
+}
+
+.label::before {
+  content: '// ';
+  opacity: 0.5;
+}
+
+.title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 3rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.formLabel::before {
+  content: '> ';
+  color: var(--cyan);
+}
+
+.formInput,
+.formTextarea {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: var(--border2);
+}
+
+.formTextarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.btnPrimary {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--cyan);
+  color: #000;
+  border: none;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .contact {
+    padding: 5rem 1.25rem;
+  }
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.socialMedia a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    transition: 0.2s ease;
+}
+
+.socialMedia a:hover {
+    color: var(--cyan);
+    border-color: var(--cyan);
+    transform: translateY(-3px);
+}
+
+.socialMedia svg {
+    font-size: 1.1rem;
+}
