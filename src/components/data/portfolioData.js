@@ -31,6 +31,13 @@ export const PROJECTS = [
     tags: ["Python", "AI", "Computer Vision", "OpenCV"],
     link: "https://github.com/r4himi/Snake-Game",
   },
+  {
+    title: "Talksy Chat Application",
+    description:
+      "A real-time messaging application built with Django and Django Channels. Users can create private conversations and exchange messages instantly using WebSockets without refreshing the page.",
+    tags: ["Python", "Django", "Django Channels", "WebSockets", "JavaScript"],
+    link: "https://github.com/r4himi/Chat-Application",
+  },
 ];
 
 export const STATS = [
