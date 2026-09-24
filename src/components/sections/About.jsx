@@ -11,16 +11,18 @@ export default function About() {
         <div className={styles.grid}>
           <div className={styles.text}>
             <p>
-              I'm a <strong>frontend developer</strong> passionate about creating
-              digital products that are both functional and beautiful. Currently
-              building with <strong>React + Vite</strong> and always learning
-              what's next.
+              I'm a <strong>full-stack developer</strong> interested in building practical
+              web applications that solve real-world problems. I work mainly with
+              <strong>React, Django, Python, and JavaScript</strong>, and I enjoy turning
+              ideas into simple and useful digital products.
             </p>
             <p>
-              I care deeply about <strong>user experience</strong>, performance,
-              and writing code that lasts. When I'm not coding, I'm probably
-              sketching UI ideas or exploring new tech.
+              I’m continuously improving my development skills by building projects,
+              learning new technologies, and solving problems through code. My goal is to
+              grow as a software developer and eventually work on projects involving
+              <strong> AI and machine learning</strong>.
             </p>
+
           </div>
           <div className={styles.stats}>
             {STATS.map((s, i) => (
