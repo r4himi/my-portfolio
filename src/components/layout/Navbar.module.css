@@ -1,5 +1,6 @@
+
 body {
-  padding-top: 80px; /* adjust based on navbar height */
+  padding-top: 72px;
 }
 
 .nav {
@@ -7,26 +8,27 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  padding: 1.2rem 2.5rem;
+  z-index: 1000;
+  height: 72px;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
-  background: transparent;
-  transition: background 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease;
+  background: rgba(8, 12, 16, 0.85);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .scrolled {
-  background: rgba(8, 12, 16, 0.95);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(12px);
+  background: rgba(8, 12, 16, 0.96);
+  border-bottom-color: var(--border);
 }
 
 .logo {
   font-family: var(--display);
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--cyan);
   letter-spacing: -0.02em;
   cursor: pointer;
@@ -38,7 +40,8 @@ body {
 
 .links {
   display: flex;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.75rem;
   list-style: none;
 }
 
@@ -47,24 +50,24 @@ body {
   border: none;
   color: var(--text-dim);
   font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
   padding: 0.25rem 0;
   position: relative;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .links button::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   left: 0;
   width: 0;
   height: 1px;
   background: var(--cyan);
-  transition: width 0.25s;
+  transition: width 0.2s ease;
 }
 
 .links button:hover,
@@ -86,20 +89,30 @@ body {
   border: none;
   cursor: pointer;
   padding: 4px;
-  z-index: 101;
+  z-index: 1001;
 }
 
 .hamburger span {
   display: block;
   width: 22px;
-  height: 1.5px;
+  height: 2px;
   background: var(--cyan);
-  transition: transform 0.3s;
+  border-radius: 2px;
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 640px) {
+  body {
+    padding-top: 64px;
+  }
+
   .nav {
-    padding: 1rem 1.25rem;
+    height: 64px;
+    padding: 0 1.25rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
   }
 
   .links {
@@ -110,22 +123,23 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
+    top: 64px;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(8, 12, 16, 0.97);
+    background: rgba(8, 12, 16, 0.98);
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.75rem;
     z-index: 99;
   }
 
   .links.open button {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hamburger {
     display: flex;
   }
 }
+
